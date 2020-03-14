@@ -13,14 +13,12 @@ object Dependencies {
         .excludeAll(ExclusionRule("org.slf4j"))
   }
 
-  val kafkaStreams = "org.apache.kafka" % "kafka-streams" % KafkaVersion
-  val scalaLogging = "com.typesafe.scala-logging" %% "scala-logging" % ScalaLoggingVersion
-  val logback = "ch.qos.logback" % "logback-classic" % LogbackVersion
-  val kafka = "org.apache.kafka" %% "kafka" % KafkaVersion
-  val curator = "org.apache.curator" % "curator-test" % CuratorVersion
-  val minitest = "io.monix" %% "minitest" % MinitestVersion
-  val minitestLaws = "io.monix" %% "minitest-laws" % MinitestVersion
-  val algebird = "com.twitter" %% "algebird-core" % AlgebirdVersion
-  val chill = "com.twitter" %% "chill" % ChillVersion
-  val avro4s = "com.sksamuel.avro4s" %% "avro4s-core" % Avro4sVersion
+  val kafkaStreams = "org.apache.kafka"    % "kafka-streams" % KafkaVersion
+  val kafkaClient  = "org.apache.kafka"    % "kafka-clients" % KafkaVersion
+  val avro4s       = "com.sksamuel.avro4s" %% "avro4s-core"  % Avro4sVersion
+
+  val scalaLogging = "com.typesafe.scala-logging" %% "scala-logging"  % ScalaLoggingVersion
+  val logback      = "ch.qos.logback"             % "logback-classic" % LogbackVersion
+  val chill        = "com.twitter"                %% "chill"          % ChillVersion // kryo serializer
+
 }
